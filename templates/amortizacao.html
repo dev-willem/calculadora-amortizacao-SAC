@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Amortização de Empréstimo (SAC)</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Amortização de Empréstimo (SAC)</h1>
+
+        <form method="POST">
+            <label for="saldo_devedor">Saldo Devedor (R$):</label>
+            <input type="number" id="saldo_devedor" name="saldo_devedor" step="0.01" required>
+
+            <label for="numero_de_meses">Número de Meses:</label>
+            <input type="number" id="numero_de_meses" name="numero_de_meses" required>
+
+            <label for="taxa_juros">Taxa de Juros (%):</label>
+            <input type="number" id="taxa_juros" name="taxa_juros" step="0.01" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        {% if amortizacao is not none %}
+        <h2>Resultados:</h2>
+        <p><strong>Capital Inicial:</strong> R$ {{ saldo_devedor }}</p>
+        <p><strong>Amortização Mensal:</strong> R$ {{ amortizacao }}</p>
+        <p><strong>Juros Totais:</strong> R$ {{ juros_totais }}</p>
+        <p><strong>Montante:</strong> R$ {{ montante }}</p>
+
+        <h3>Prestações Mensais:</h3>
+        <ul>
+            {% for prestacao in prestacoes %}
+                <li>Mês {{ loop.index }}: R$ {{ prestacao|round(2) }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
