@@ -23,7 +23,7 @@ O projeto foi desenvolvido para um trabalho escolar e está disponível na plata
 Clone o repositório para sua máquina local:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/PROJETO_SAC.git
+git clone https://github.com/dev-willem/calculadora-amortizacao-SAC.git
 ```
 
 ### 2. Criar um Ambiente Virtual
@@ -95,7 +95,7 @@ Abra o navegador e acesse `http://127.0.0.1:5000/` para interagir com o aplicati
 
 O projeto foi deployado na plataforma Vercel, e você pode acessá-lo online no seguinte link:
 
-[**Link para o Deploy**](https://seu-usuario.vercel.app)
+[**Link para o Deploy**](https://calc-metodo-sac.vercel.app/)
 
 ## Estrutura do Projeto
 
@@ -104,12 +104,13 @@ projeto-sac/
 │
 ├── app.py              # Arquivo principal do Flask.
 ├── requirements.txt    # Arquivo com as dependências do projeto.
+├── .flaskenv           # Arquivo com as variáveis de ambiente do projeto
+├── vercel.json         # Arquivo de configuração para personalizar o comportamento do projeto implantado na plataforma Vercel
 ├── templates/
 │   └── amortizacao.html  # Template HTML para exibição da interface.
 ├── static/
-│   └── css/
-│       └── style.css   # Arquivo CSS para estilização da página.
-└── venv/               # Ambiente virtual (pode ser ignorado no repositório).
+│   └── style.css   # Arquivo CSS para estilização da página.
+└── venv/               # Ambiente virtual.
 ```
 
 ## Contribuições
