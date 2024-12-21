@@ -9,7 +9,7 @@ def calculaJurosTotais(saldo_devedor, numero_de_meses, taxa_juros):
     total_juros = 0
     amortizacao = saldo_devedor / numero_de_meses
     for mes in range(1, numero_de_meses + 1):
-        juros_mes = saldo_devedor * (taxa_juros / 100) / 12
+        juros_mes = saldo_devedor * (taxa_juros / 100)
         total_juros += juros_mes
         saldo_devedor -= amortizacao
     return round(total_juros, 2)
@@ -18,7 +18,7 @@ def calculaPrestacoes(saldo_devedor, numero_de_meses, taxa_juros):
     prestacoes = []
     amortizacao = saldo_devedor / numero_de_meses
     for mes in range(1, numero_de_meses + 1):
-        juros_mes = saldo_devedor * (taxa_juros / 100) / 12
+        juros_mes = saldo_devedor * (taxa_juros / 100)
         prestacao = amortizacao + juros_mes
         prestacoes.append(round(prestacao, 2))
         saldo_devedor -= amortizacao
