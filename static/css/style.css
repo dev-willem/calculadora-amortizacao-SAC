@@ -21,9 +21,21 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
     width: 100%;
     max-width: 500px;
+}
+
+header {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+header ul a img {
+    width: 20px;
 }
 
 h1 {
